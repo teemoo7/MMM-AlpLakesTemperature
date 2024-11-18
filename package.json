@@ -1,0 +1,27 @@
+{
+  "name": "MMM-AlplakesLiveTemperature",
+  "description": "A MagicMirror module to display the current temperature of the Alps lakes in Switzerland, Italy, and France.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teemoo7/MMM-AlplakesLiveTemperature.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "MagicMirror2",
+    "MMM",
+    "MMM-Module",
+    "MMM-AlplakesLiveTemperature",
+    "Alplakes",
+    "Temperature",
+    "Switzerland",
+    "Italy",
+    "France",
+    "Alps",
+    "Lakes"
+  ],
+  "author": "Micael Paquier",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
