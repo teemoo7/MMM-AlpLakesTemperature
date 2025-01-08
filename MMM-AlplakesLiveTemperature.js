@@ -81,7 +81,7 @@ Module.register("MMM-AlplakesLiveTemperature", {
 		this.sendSocketNotification("GET_TEMPERATURE_REQUEST", this.config);
 	},
 
-	convertCelsiusToFahrenheit(temperatureIn) {
+	convertCelsiusToFahrenheit: function(temperatureIn) {
 		return Math.round((temperatureIn * 9 / 5) + 32);
 	}
 });
