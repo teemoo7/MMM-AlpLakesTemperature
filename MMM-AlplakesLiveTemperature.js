@@ -69,8 +69,10 @@ Module.register("MMM-AlplakesLiveTemperature", {
 				this.updateDom(this.config.animationSpeed);
 				break;
 			case "GET_TEMPERATURE_RESULT":
-				this.temperature.inCelsius = payload;
-				this.temperature.inFahrenheit = this.convertCelsiusToFahrenheit(payload);
+				this.temperature = {
+					inCelsius: payload,
+					inFahrenheit: this.convertCelsiusToFahrenheit(payload)
+				};
 				this.errorMessage = undefined;
 				this.updateDom(this.config.animationSpeed);
 				break;
