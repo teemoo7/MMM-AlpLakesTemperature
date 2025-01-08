@@ -53,7 +53,7 @@ Module.register("MMM-AlplakesLiveTemperature", {
 			if (this.config.units === "imperial") {
 				temperatureDiv.innerHTML = this.temperature.inFahrenheit + "°F";
 			} else {
-				temperatureDiv.innerHTML = this.temperature + "°C";
+				temperatureDiv.innerHTML = this.temperature.inCelsius + "°C";
 			}
 			wrapper.appendChild(temperatureDiv);
 		}
