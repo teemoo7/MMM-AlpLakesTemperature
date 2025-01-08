@@ -4,7 +4,8 @@ Module.register("MMM-AlplakesLiveTemperature", {
 		title: "",
 		depth: 1,
 		refresh: (60 * 60 * 1000),
-		animationSpeed: 2000
+		animationSpeed: 2000,
+		units: config.units,
 	},
 
 	start: function() {
@@ -49,7 +50,11 @@ Module.register("MMM-AlplakesLiveTemperature", {
 
 			let temperatureDiv = document.createElement("div");
 			temperatureDiv.className = "temperature-value bright large";
-			temperatureDiv.innerHTML = this.temperature + "°C";
+			if (this.config.units === "imperial") {
+				temperatureDiv.innerHTML = this.temperature.inFahrenheit + "°F";
+			} else {
+				temperatureDiv.innerHTML = this.temperature + "°C";
+			}
 			wrapper.appendChild(temperatureDiv);
 		}
 
@@ -64,7 +69,8 @@ Module.register("MMM-AlplakesLiveTemperature", {
 				this.updateDom(this.config.animationSpeed);
 				break;
 			case "GET_TEMPERATURE_RESULT":
-				this.temperature = payload;
+				this.temperature.inCelsius = payload;
+				this.temperature.inFahrenheit = this.convertCelsiusToFahrenheit(payload);
 				this.errorMessage = undefined;
 				this.updateDom(this.config.animationSpeed);
 				break;
@@ -73,6 +79,9 @@ Module.register("MMM-AlplakesLiveTemperature", {
 
 	getLiveTemperature: function() {
 		this.sendSocketNotification("GET_TEMPERATURE_REQUEST", this.config);
-	}
+	},
 
+	convertCelsiusToFahrenheit(temperatureIn) {
+		return Math.round((temperatureIn * 9 / 5) + 32);
+	}
 });

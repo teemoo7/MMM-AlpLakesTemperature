@@ -56,15 +56,16 @@ modules: [
 
 ### Options
 
-| Field            | Required | Description                                                    | Default                     |
-|------------------|----------|----------------------------------------------------------------|-----------------------------|
-| `title`          | `false`  | The title to be displayed (lake name or beach name, up to you) | (empty)                     |
-| `lake`           | `true`   | The lake name as defined by API provider Alplakes (see below)  |                     |
-| `depth `         | `false`  | The depth (in meters) at which temperature is to be retrieved  | `1`                         |
-| `latitude `      | `false`  | Latitude coordinate of the location                            | (empty)                     |
-| `longitude`      | `false`  | The depth (in meters) at which temperature is to be retrieved  | (empty)                     |
-| `refresh`        | `false`  | Refresh interval (in milliseconds)                             | `(60 * 60 * 1000)` (1 hour) |
-| `animationSpeed` | `false`  | Animation time to display results (in milliseconds)            | `2000`                      |
+| Field            | Required | Description                                                           | Default                          |
+|------------------|----------|-----------------------------------------------------------------------|----------------------------------|
+| `title`          | `false`  | The title to be displayed (lake name or beach name, up to you)        | (empty)                          |
+| `lake`           | `true`   | The lake name as defined by API provider Alplakes (see below)         |                                  |
+| `depth `         | `false`  | The depth (in meters) at which temperature is to be retrieved         | `1`                              |
+| `latitude `      | `false`  | Latitude coordinate of the location                                   | (empty)                          |
+| `longitude`      | `false`  | The depth (in meters) at which temperature is to be retrieved         | (empty)                          |
+| `refresh`        | `false`  | Refresh interval (in milliseconds)                                    | `(60 * 60 * 1000)` (1 hour)      |
+| `animationSpeed` | `false`  | Animation time to display results (in milliseconds)                   | `2000`                           |
+| `units`          | `false`  | Units for temperature. Values can be `metric` (°C) or `imperial` (°F) | Value from global config `units` |
 
 ## Alplakes API
 
