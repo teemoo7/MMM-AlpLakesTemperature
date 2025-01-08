@@ -1,7 +1,9 @@
 # MMM-AlplakesLiveTemperature
 
-Displays live temperature of a given lake in the Alps (Switzerland, Italy, France, ...). 
+[MagicMirror²](https://github.com/MichMich/MagicMirror/) module to display live temperature of a given lake in the Alps (Switzerland, Italy, France, ...). 
 Note that not all lakes are covered by the API provider.
+
+![ScreenShot](screenshots/temperature.png)
 
 ## Installation
 
